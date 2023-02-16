@@ -29,8 +29,7 @@ var fourSum = function(nums, target) {
             while(nums[j]===nums[j+1])j++
         }
         while(nums[i]===nums[i+1])i++
-    }
-
+    };
     
     return result;
 };
