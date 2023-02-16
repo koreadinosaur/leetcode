@@ -4,5 +4,18 @@
  45분
  */
 var sortColors = function(nums) {
-    return nums.sort((a,b)=>a-b)
+ 
+    let whiteCount = 0;
+    let blueCount = 0;
+    for(let i = 0; i<nums.length ; i++){
+        if(nums[i]===1) whiteCount++;
+        if(nums[i]===2) blueCount++;
+    }
+      nums.fill(0)
+    for(let i = nums.length - whiteCount - blueCount; i < nums.length-blueCount; i++){
+        nums[i] = 1;
+    }
+    for(let i =nums.length - blueCount ; i <nums.length;i++){
+        nums[i] = 2;
+    }
 };
