@@ -5,6 +5,7 @@
  */
 var longestCommonPrefix = function(strs) {
     let prefix = '';
+    let count = 0;
     for(let i = 0; i<strs[0].length;i++){
         let isSame = true;
         for(let j=1;j<strs.length ; j++){
@@ -12,12 +13,14 @@ var longestCommonPrefix = function(strs) {
                 isSame = false;
                 break;
             }
+            
         }
         if(isSame){
             prefix += strs[0][i];
+            count++;
         } else {
             break;
         }
     }
-    return prefix;
+    return strs[0].substring(0,count);
 };
