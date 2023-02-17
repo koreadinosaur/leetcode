@@ -4,7 +4,6 @@
  25분
  */
 var longestCommonPrefix = function(strs) {
-    let prefix = '';
     let count = 0;
     for(let i = 0; i<strs[0].length;i++){
         let isSame = true;
@@ -16,7 +15,6 @@ var longestCommonPrefix = function(strs) {
             
         }
         if(isSame){
-            prefix += strs[0][i];
             count++;
         } else {
             break;
