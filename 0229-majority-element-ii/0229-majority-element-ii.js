@@ -5,13 +5,11 @@
  */
 var majorityElement = function(nums) {
     let frequency = {}
+        let result = []
     for(let ele of nums){
         frequency[ele] = (frequency[ele]||0) +1;
-    }
-    let result = []
-    for (let key in frequency){
-        if(frequency[key] > nums.length/3){
-            result.push(key);
+        if(frequency[ele]>nums.length/3&&result.indexOf(ele)=== -1){
+            result.push(ele)
         }
     }
     return result
