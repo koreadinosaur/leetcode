@@ -26,7 +26,7 @@ var sortedListToBST = function(head) {
         headNode = headNode.next;
     }
     const BST = (array) => {
-        if(!array.length||!array) return null;
+        if(!array.length) return null;
         let center = Math.floor(array.length/2);
         let node = new TreeNode(array[center]);
         node.left = BST(array.slice(0,center));
